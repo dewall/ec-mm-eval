@@ -1,4 +1,8 @@
-var gulp = require("gulp");
+var gulp = require("gulp"),
+    webpack = require("webpack"),
+    webpackStream = require("webpack-stream");
+
+var config = require("./webpack.config.js");
 
 var paths = {
     pages: ['src/*.html']
@@ -15,4 +19,10 @@ gulp.task("styles", function(){
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task("default", ["copy-html"]);
+gulp.task("webpack", function(){
+    return gulp.src("src/app.js")
+        .pipe(webpackStream(config, webpack))
+        .pipe(gulp.dest("dist/"));
+});
+
+gulp.task("default", ["webpack"]);
