@@ -7,5 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dewall",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^14.5.0",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.2.3",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.6",
+    "tsify": "^3.0.4",
+    "typescript": "^2.6.2",
+    "vinyl-source-stream": "^2.0.0"
+  }
 }
