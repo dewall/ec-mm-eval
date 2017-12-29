@@ -1,4 +1,5 @@
-#map{
-    height: 100%;
+@import "~leaflet/dist/leaflet.css";
+#map {
     width: 100%;
-}
+    height: 500px;
+} 

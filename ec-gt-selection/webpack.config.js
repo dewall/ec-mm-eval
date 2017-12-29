@@ -10,7 +10,7 @@ module.exports = {
     devtool: '#cheap-module-eval-source-map',
     context: srcPath,
     entry: {
-        app: './app.js',
+        app: './app.ts',
     },
     output: {
         path: distPath,
@@ -19,6 +19,14 @@ module.exports = {
     },
     resolve: {
         modules: ["node_modules"],
+        extensions: [".ts", ".js"]
+    },
+    module: {
+        rules: [
+            { test: /\.ts?$/, loader: "ts-loader" },
+            { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
+            { test: /\.(png|jpe?g|gif|svg)(\?.*)?$/, loader: 'url-loader' }
+        ]
     },
     plugins: [
         new webpack.NoEmitOnErrorsPlugin()
