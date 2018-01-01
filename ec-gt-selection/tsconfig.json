@@ -1,9 +1,26 @@
 {
-    "files": [
-        "src/app.ts"
-    ],
     "compilerOptions": {
-        "noImplicitAny": true,
-        "target": "es5"
-    }
-}
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "removeComments": false,
+      "noImplicitAny": false,
+      "outDir": "./temp",
+      "lib": [
+        "dom",
+        "es6"
+      ],
+      "types": [
+        "node"
+      ]
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "exclude": [
+      "./node_modules",
+      "./dist"
+    ]
+  }
